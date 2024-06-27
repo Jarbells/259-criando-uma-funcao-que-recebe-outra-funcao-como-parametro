@@ -22,7 +22,7 @@ public class Program {
 		list.add(new Product("HD Case", 80.90)); 
 		
 		ProductService prod = new ProductService();
-		double sum = prod.filteredSum(list);
+		double sum = prod.filteredSum(list, x -> x.getPrice() <= 100.0);
 
 		System.out.println("Sum = " + String.format("%.2f", sum));
 	}
